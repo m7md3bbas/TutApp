@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutapp/presentation/font_manager.dart';
+import 'package:tutapp/presentation/res/font_manager.dart';
 
 TextStyle _getTextStyle(
     {required Color color,
