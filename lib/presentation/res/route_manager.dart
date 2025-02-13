@@ -3,6 +3,7 @@ import 'package:tutapp/presentation/forgetpassword/forgetpassword_view.dart';
 import 'package:tutapp/presentation/login/login_view.dart';
 import 'package:tutapp/presentation/main/main_view.dart';
 import 'package:tutapp/presentation/register/register_view.dart';
+import 'package:tutapp/presentation/res/strings_manager.dart';
 import 'package:tutapp/presentation/splash/splash_view.dart';
 import 'package:tutapp/presentation/store/store_view.dart';
 
@@ -39,10 +40,9 @@ class RouteGen {
     return MaterialPageRoute(
         builder: (_) => Scaffold(
               appBar: AppBar(
-                title: const Text("No Route Found"), // todo no hard code
+                title: const Text(StringsManager.noRouteFound),
               ),
-              body: const Center(
-                  child: Text("No Route Found")), // todo no hard code
+              body: Center(child: Text(StringsManager.noRouteFound)),
             ));
   }
 }
