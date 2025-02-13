@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tutapp/presentation/res/route_manager.dart';
 import 'package:tutapp/presentation/res/theme_manager.dart';
+import 'package:tutapp/presentation/splash/splash_view.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp._internal();
@@ -13,7 +15,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: RouteGen.getRoute,
+      initialRoute: RouteManager.splashRoute,
       theme: getAppTheme(),
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
     );
   }
 }
