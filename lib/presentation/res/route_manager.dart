@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tutapp/presentation/forgetpassword/forgetpassword_view.dart';
 import 'package:tutapp/presentation/login/login_view.dart';
 import 'package:tutapp/presentation/main/main_view.dart';
-import 'package:tutapp/presentation/onboarding/onboarding_view.dart';
+import 'package:tutapp/presentation/onBoarding/onBoardingView/onboarding_view.dart';
 import 'package:tutapp/presentation/register/register_view.dart';
 import 'package:tutapp/presentation/res/strings_manager.dart';
 import 'package:tutapp/presentation/splash/splash_view.dart';
