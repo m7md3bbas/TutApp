@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tutapp/presentation/forgetpassword/forgetpassword_view.dart';
 import 'package:tutapp/presentation/login/login_view.dart';
 import 'package:tutapp/presentation/main/main_view.dart';
-import 'package:tutapp/presentation/onBoarding/onBoardingView/onboarding_view.dart';
+import 'package:tutapp/presentation/onboarding/onBoardingView/onboarding_view.dart';
 import 'package:tutapp/presentation/register/register_view.dart';
 import 'package:tutapp/presentation/res/strings_manager.dart';
 import 'package:tutapp/presentation/splash/splash_view.dart';
@@ -24,7 +24,7 @@ class RouteGen {
       case RouteManager.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashView());
       case RouteManager.onBoarding:
-        return MaterialPageRoute(builder: (_) => const OnboardingView());
+        return MaterialPageRoute(builder: (_) => const OnBoardingView());
       case RouteManager.loginRoute:
         return MaterialPageRoute(builder: (_) => const LoginView());
       case RouteManager.registerRoute:

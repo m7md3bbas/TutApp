@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       onGenerateRoute: RouteGen.getRoute,
       initialRoute: RouteManager.splashRoute,
-      theme: getAppTheme(),
+      theme: getApplicationTheme(),
       debugShowCheckedModeBanner: false,
       home: SplashView(),
     );
