@@ -18,3 +18,34 @@ class SliderView {
     required this.currentIndex,
   });
 }
+
+//login models
+class Customer {
+  final num id;
+  final String name;
+  final num numOfNotfications;
+
+  Customer(
+      {required this.id, required this.name, required this.numOfNotfications});
+}
+
+class Contact {
+  final num phone;
+  final String gmail;
+  final String link;
+
+  Contact({required this.phone, required this.gmail, required this.link});
+}
+
+class Authentication {
+  final Customer customer;
+  final Contact contacts;
+  final num statusCode;
+  final String message;
+
+  Authentication(
+      {required this.customer,
+      required this.contacts,
+      required this.statusCode,
+      required this.message});
+}
