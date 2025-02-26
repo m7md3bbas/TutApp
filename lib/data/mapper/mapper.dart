@@ -21,3 +21,21 @@ extension ContactResponseMapper on ContactResponse? {
         phone: this?.phone.orEmpty() ?? Constants.empty);
   }
 }
+
+extension AuthenticationResponseMapper on AuthenticationResponse? {
+  Authentication toDomain() {
+    return Authentication(
+        contacts: this?.contacts?.toDomain() ??
+            Contact(
+              gmail: Constants.empty,
+              link: Constants.empty,
+              phone: Constants.empty,
+            ),
+        customer: this?.customer?.toDomain() ??
+            Customer(
+              id: Constants.empty,
+              name: Constants.empty,
+              numOfNotfications: Constants.zero,
+            ));
+  }
+}
