@@ -18,21 +18,21 @@ Map<String, dynamic> _$BaseResponseToJson(BaseResponse instance) =>
 
 CustomerResponse _$CustomerResponseFromJson(Map<String, dynamic> json) =>
     CustomerResponse(
-      id: (json['id'] as num?)?.toInt(),
+      id: json['id'] as String?,
       name: json['name'] as String?,
-      email: json['email'] as String?,
+      numberOfNotfications: (json['email'] as int?)?.toInt(),
     );
 
 Map<String, dynamic> _$CustomerResponseToJson(CustomerResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'email': instance.email,
+      'numofnotfications': instance.numberOfNotfications,
     };
 
 ContactResponse _$ContactResponseFromJson(Map<String, dynamic> json) =>
     ContactResponse(
-      phone: (json['phone'] as num?)?.toInt(),
+      phone: json['phone'] as String,
       gmail: json['gmail'] as String?,
       link: json['link'] as String?,
     );

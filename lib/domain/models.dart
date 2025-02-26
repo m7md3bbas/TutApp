@@ -21,7 +21,7 @@ class SliderView {
 
 //login models
 class Customer {
-  final num id;
+  final String id;
   final String name;
   final num numOfNotfications;
 
@@ -30,7 +30,7 @@ class Customer {
 }
 
 class Contact {
-  final num phone;
+  final String phone;
   final String gmail;
   final String link;
 
@@ -38,14 +38,8 @@ class Contact {
 }
 
 class Authentication {
-  final Customer customer;
-  final Contact contacts;
-  final num statusCode;
-  final String message;
+  final Customer? customer;
+  final Contact? contacts;
 
-  Authentication(
-      {required this.customer,
-      required this.contacts,
-      required this.statusCode,
-      required this.message});
+  Authentication({required this.customer, required this.contacts});
 }

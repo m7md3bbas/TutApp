@@ -13,13 +13,13 @@ class BaseResponse {
 @JsonSerializable()
 class CustomerResponse {
   @JsonKey(name: 'id')
-  int? id;
+  String? id;
   @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'email')
-  String? email;
+  @JsonKey(name: 'numofnotfications')
+  int? numberOfNotfications;
 
-  CustomerResponse({this.id, this.name, this.email});
+  CustomerResponse({this.id, this.name, this.numberOfNotfications});
 
   factory CustomerResponse.fromJson(Map<String, dynamic> json) =>
       _$CustomerResponseFromJson(json);
@@ -29,7 +29,7 @@ class CustomerResponse {
 @JsonSerializable()
 class ContactResponse {
   @JsonKey(name: 'phone')
-  int? phone;
+  String? phone;
   @JsonKey(name: 'gmail')
   String? gmail;
   @JsonKey(name: 'link')
