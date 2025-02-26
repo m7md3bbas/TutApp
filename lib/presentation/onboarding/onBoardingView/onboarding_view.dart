@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tutapp/domain/models.dart';
+import 'package:tutapp/domain/models/models.dart';
 import 'package:tutapp/presentation/onboarding/onBoarding_view_model/onboarding_view_model.dart';
 import 'package:tutapp/presentation/res/assets_manager.dart';
 import 'package:tutapp/presentation/res/color_manager.dart';
@@ -18,14 +18,16 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class OnBoardingViewState extends State<OnBoardingView> {
-  final PageController _pageController = PageController();
-  final OnboardingViewModel _onboardingViewModel = OnboardingViewModel();
+  late final PageController _pageController;
+  late final OnboardingViewModel _onboardingViewModel;
   void _bind() {
     _onboardingViewModel.start();
   }
 
   @override
   void initState() {
+    _onboardingViewModel = OnboardingViewModel();
+    _pageController = PageController();
     _bind();
     super.initState();
   }
@@ -52,7 +54,6 @@ class OnBoardingViewState extends State<OnBoardingView> {
               statusBarBrightness: Brightness.dark),
         ),
         body: PageView.builder(
-
             controller: _pageController,
             itemCount: sliderView.numberOfSlids,
             onPageChanged: (index) => _onboardingViewModel.onPageChanged(index),

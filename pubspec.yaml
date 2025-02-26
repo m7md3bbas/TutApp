@@ -30,10 +30,12 @@ environment:
 dependencies:
   analyzer: ^7.3.0
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
   dio: ^5.8.0+1
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.17
+  internet_connection_checker: ^3.0.1
   json_annotation: ^4.9.0
   retrofit: ^4.4.2
 
