@@ -15,4 +15,7 @@ class StringsManager {
       "Tut app is an awesome flutter application using clean architecture #4";
 
   static const String skip = "Skip";
+
+  static const String noInernetConection = 'No Internet Connection';
+  static const String pleaseTryAgain = 'Please try again';
 }

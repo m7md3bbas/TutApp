@@ -4,5 +4,6 @@ import 'package:tutapp/data/network/login_request.dart';
 import 'package:tutapp/domain/models/models.dart';
 
 abstract class Repository {
-  Future<Either<Failure, Authentication>> login({LoginRequest loginRequest});
+  Future<Either<Failure, Authentication>> login(
+      {required LoginRequest loginRequest});
 }
